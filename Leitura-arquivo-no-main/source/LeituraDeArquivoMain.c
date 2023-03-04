@@ -1,6 +1,6 @@
-#include "LeituraDeArquivoMain.h"
-#include "arquivo.h"
-#include "constantes.h"
+#include "../headers/LeituraDeArquivoMain.h"
+#include "../headers/arquivo.h"
+#include "../headers/constantes.h"
 
 void numPalavras_char_ln(FILE *farquivo) {
     int linhas = 1, caracteres = 0, charEspaco = 0, palavras = 0;

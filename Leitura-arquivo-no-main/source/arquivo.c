@@ -1,4 +1,4 @@
-#include "arquivo.h"
+#include "../headers/arquivo.h"
 
 int abreArquivo(FILE **farquivo, char *nome) {
     *farquivo = fopen(nome, "r");
