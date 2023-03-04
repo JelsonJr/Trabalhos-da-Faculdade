@@ -90,6 +90,20 @@ void descriptografaArquivo(int senha)
     fclose(fc);
 }
 
+int validaSenha(char c)
+{
+    while ((c = getchar()) != '\n')
+    {
+        if (!isdigit(c))
+        {
+            printf("Erro: a senha deve ser um numero inteiro.\n");
+            c = 's';
+            return 1;
+        }
+        return 0;
+    }
+}
+
 int main()
 {
     char nome[100], c, opcao;
@@ -111,18 +125,7 @@ int main()
             printf("Digite a senha numerica (a mesma senha devera ser usada para descriptografar): \n");
             c = getchar();
 
-            while ((c = getchar()) != '\n')
-            {   
-                printf("entrou no while");
-                if (!isdigit(c))
-                {
-                    printf("Erro: a senha deve ser um numero inteiro.\n");
-                    c = 's';
-                    break;
-                }
-            }
-
-            if(c == 's') break;
+            if(validaSenha(c)) break;
             scanf("%d", &senha);
 
             criptografaArquivo(nome, senha);
