@@ -2,7 +2,7 @@
 
 int abreArquivo(FILE **farquivo, char *nome) {
     *farquivo = fopen(nome, "r");
-    if (!(*farquivo)) {
+    if (*farquivo == NULL) {
         printf("Erro ao abrir arquivo, verifique se o nome ou diretorio passado esta correto!\n");
         return 1;
     }
@@ -13,7 +13,7 @@ int abreArquivo(FILE **farquivo, char *nome) {
 }
 
 int verificaArquivo(FILE *farquivo) {
-    if (!farquivo) {
+    if (farquivo == NULL) {
         printf("Erro, arquivo inexistente!");
         system("pause");
         return 1;

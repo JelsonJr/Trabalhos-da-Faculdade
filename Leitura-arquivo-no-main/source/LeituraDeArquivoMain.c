@@ -5,9 +5,6 @@
 void numPalavras_char_ln(FILE *farquivo) {
     int linhas = 1, caracteres = 0, charEspaco = 0, palavras = 0;
 
-    if (verificaArquivo(farquivo))
-        return;
-
     rewind(farquivo);
     while (!feof(farquivo)) {
         char c;
@@ -38,7 +35,7 @@ void numPalavras_char_ln(FILE *farquivo) {
 }
 
 int main(int argc, char *argv[]) {
-    FILE *farquivo;
+    FILE *farquivo = NULL;
 
     if (argc != 2) {
         printf("Parametros invalidos, passe apenas o nome do arquivo!");
@@ -46,6 +43,7 @@ int main(int argc, char *argv[]) {
     }
 
     if(abreArquivo(&farquivo, argv[1])) exit(1);
+    if (verificaArquivo(farquivo)) exit(1);
 
     numPalavras_char_ln(farquivo);
 
