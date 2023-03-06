@@ -12,14 +12,11 @@ void numPalavras_char_ln(FILE *farquivo)
         char c;
         c = getc(farquivo);
 
-        if (c == LINHA)
-            linhas++;
+        if (c == LINHA) linhas++;
 
-        if (c == ESPACO)
-            charEspaco++;
+        if (c == ESPACO) charEspaco++;
 
-        if (c != LINHA && c != NULO && c != ESPACO && c != FIM)
-            caracteres++;
+        if (c != LINHA && c != NULO && c != ESPACO && c != FIM) caracteres++;
     }
 
     rewind(farquivo);

@@ -9,6 +9,8 @@
  * Jelson Rodrigues Antonio Jr.
  * Lucas Vincius M. P. S. L. Morais
  * Otavio Luis Dal Molin Folador
+ * 
+ * refatorado por: Jelson Rodrigues Antonio Jr.
  */
 
 FILE *fp;
