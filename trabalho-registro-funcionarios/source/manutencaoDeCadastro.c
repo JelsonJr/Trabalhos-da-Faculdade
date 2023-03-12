@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <windows.h>
-#include "registro_funcionario.h"
+#include "../headers/registro_funcionario.h"
 
 /* Trabalho de Algoritmos e Programacao
  *
