@@ -5,11 +5,12 @@
 #include "../headers/forca.h"
 #include "../headers/chutesErrados.h"
 #include "../headers/enforcou.h"
+#include "../headers/revelaPalavraComposta.h"
 
 char palavraSecreta[TAMANHO_PALAVRA];
 char chute;
 char errosChute[26];
-char chutes[26];
+char chutes[28];
 int chutesDados = 0;
 int contadorErros = 0;
 
@@ -36,36 +37,6 @@ int ganhou()
             return 0;
 
     return 1;
-}
-
-void abertura()
-{
-    printf("/****************/\n");
-    printf("/ Jogo da Forca */\n");
-    printf("/****************/\n\n");
-}
-
-void revelaPalavraComposta()
-{
-    int tamanho;
-    char chute;
-    tamanho = strlen(palavraSecreta) - 1;
-
-    for (int i = 0; i <= tamanho; i++)
-    {
-        if (palavraSecreta[i] == '-')
-        {
-            chute = '-';
-            chutes[chutesDados] = chute;
-            chutesDados++;
-        }
-        if (palavraSecreta[i] == ' ')
-        {
-            chute = ' ';
-            chutes[chutesDados] = chute;
-            chutesDados++;
-        }
-    }
 }
 
 int jaChutou(char letra)
@@ -140,7 +111,7 @@ int main()
     do
     {
         desenhaForca();
-        revelaPalavraComposta();
+        revelaPalavraComposta(palavraSecreta, chutes, chutesDados);
         chuta();
     } while (!ganhou() && !enforcou(chutesDados, chutes, palavraSecreta));
 
