@@ -1,6 +1,6 @@
 #include "../headers/revelaPalavraComposta.h"
 
-void revelaPalavraComposta(char* palavraSecreta, char* chutes, int chutesDados)
+void revelaPalavraComposta(char palavraSecreta[TAMANHO_PALAVRA], char chutes[28], int chutesDados)
 {
     int tamanho;
     char chute;

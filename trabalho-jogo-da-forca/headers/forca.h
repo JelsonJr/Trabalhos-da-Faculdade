@@ -1,8 +1,7 @@
-#define TAMANHO_PALAVRA 30
+#include "../headers/TAMANHO_PALAVRA.h"
 
 void abertura();
 void desenhaForca();
-void adicionaPalavra();
 void mostraLetrasChutadas(int erros);
 int jaChutou(char letra);
 void chuta();

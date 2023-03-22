@@ -6,6 +6,7 @@
 #include "../headers/chutesErrados.h"
 #include "../headers/enforcou.h"
 #include "../headers/revelaPalavraComposta.h"
+#include "../headers/adicionaPalavra.h"
 
 char palavraSecreta[TAMANHO_PALAVRA];
 char chute;
@@ -94,18 +95,10 @@ void desenhaForca()
     mostraLetrasChutadas(erros);
 }
 
-void adicionaPalavra()
-{
-    printf("Digite a nova palavra, em letras maiusculas: ");
-    fgets(palavraSecreta, TAMANHO_PALAVRA, stdin);
-
-    palavraSecreta[strcspn(palavraSecreta, "\n")] = '\0';
-}
-
 int main()
 {
     abertura();
-    adicionaPalavra();
+    adicionaPalavra(palavraSecreta);
     system("cls");
 
     do

@@ -1,6 +1,6 @@
 #include "../headers/chutesErrados.h"
 
-int chutesErrados(int chutesDados, char* chutes, char* palavraSecreta)
+int chutesErrados(int chutesDados, char* chutes, char palavraSecreta[TAMANHO_PALAVRA])
 {
     int erros = 0;
 
